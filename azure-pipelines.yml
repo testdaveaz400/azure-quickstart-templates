@@ -20,11 +20,13 @@ steps:
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'candeploy'
     subscriptionId: 'c7d4ef2e-d5ee-4cd2-b88c-c435f6281b52'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'fuck'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: '/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.json'
-    csmParametersFile: '/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.parameters.json'
+    csmFile: '$Build.SourcesDirectory/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.json'
+    csmParametersFile: '$Build.SourcesDirectory/blob/master/quickstarts/microsoft.compute/vm-simple-windows/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
