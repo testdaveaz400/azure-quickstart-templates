@@ -27,6 +27,6 @@ steps:
     resourceGroupName: 'fuck'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: '$(Build.SourcesDirectory)/blob/master/quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.json'
-    csmParametersFile: '$(Build.SourcesDirectory)/blob/master/quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.parameters.json'
+    csmFile: '$(Build.SourcesDirectory)/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
